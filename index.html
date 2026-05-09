@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vipul Pawar - Software Developer</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#3b82f6',
+                        dark: {
+                            900: '#0a0a0a',
+                            800: '#1a1a1a',
+                            700: '#2a2a2a',
+                            600: '#3a3a3a'
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-dark-900 text-gray-300 font-sans">
+
+    <!-- Navigation -->
+    <nav class="fixed top-0 w-full bg-dark-900/95 backdrop-blur-sm z-50 border-b border-gray-800">
+        <div class="max-w-7xl mx-auto px-6 py-4">
+            <div class="flex justify-between items-center">
+                <a href="#hero" class="text-2xl font-bold text-white">VP</a>
+                <div class="hidden md:flex space-x-8">
+                    <a href="index.html" class="text-primary font-semibold">Home</a>
+                    <a href="#projects" class="hover:text-primary transition">Projects</a>
+                    <a href="certificates.html" class="hover:text-primary transition">Certificates</a>
+                    <a href="#contact" class="hover:text-primary transition">Contact</a>
+                </div>
+                <button id="menu-btn" class="md:hidden text-2xl">☰</button>
+            </div>
+            <div id="mobile-menu" class="hidden md:hidden mt-4 space-y-4">
+                <a href="index.html" class="block text-primary font-semibold">Home</a>
+                <a href="#projects" class="block hover:text-primary transition">Projects</a>
+                <a href="certificates.html" class="block hover:text-primary transition">Certificates</a>
+                <a href="#contact" class="block hover:text-primary transition">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="hero" class="min-h-screen flex items-center justify-center pt-20 px-6">
+        <div class="max-w-4xl mx-auto text-center">
+            <h1 class="text-5xl md:text-7xl font-bold text-white mb-6">Vipul Pawar</h1>
+            <p class="text-2xl md:text-3xl text-primary mb-4 font-semibold">Software Developer | IoT & Backend Systems</p>
+            <p class="text-lg md:text-xl text-gray-400 mb-12 max-w-3xl mx-auto">
+                "I build software-driven systems that connect devices, data, and real-world applications."
+            </p>
+            <div class="flex flex-wrap justify-center gap-4">
+                <a href="#projects" class="px-8 py-3 bg-primary text-white rounded-lg hover:bg-blue-600 transition font-semibold">View Projects</a>
+                <a href="https://github.com/vipul-pawar" target="_blank" class="px-8 py-3 bg-dark-700 text-white rounded-lg hover:bg-dark-600 transition font-semibold border border-gray-700">GitHub</a>
+                <a href="#contact" class="px-8 py-3 bg-dark-700 text-white rounded-lg hover:bg-dark-600 transition font-semibold border border-gray-700">Contact</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-20 px-6 bg-dark-800">
+        <div class="max-w-4xl mx-auto">
+            <h2 class="text-4xl md:text-5xl font-bold text-white mb-8 text-center">About Me</h2>
+            <p class="text-lg text-gray-300 leading-relaxed text-center max-w-3xl mx-auto">
+                Instrumentation Engineering student with a growing focus on software development. Experienced in building real-world systems involving sensors, PLCs, and embedded programming, and currently expanding into backend development and system integration. Passionate about combining hardware and software to create intelligent and scalable solutions.
+            </p>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="py-20 px-6">
+        <div class="max-w-7xl mx-auto">
+            <h2 class="text-4xl md:text-5xl font-bold text-white mb-12 text-center">Featured Projects</h2>
+            <div class="grid md:grid-cols-3 gap-8">
+                
+                <!-- Project 1: PicTale -->
+                <div class="bg-dark-800 rounded-xl p-6 border border-gray-700 hover:border-primary transition group">
+                    <h3 class="text-2xl font-bold text-white mb-3 group-hover:text-primary transition">PicTale</h3>
+                    <p class="text-gray-400 mb-4">Django-based full-stack web application with CRUD operations for photos and videos, secure authentication, and admin dashboard.</p>
+                    <div class="flex flex-wrap gap-2 mb-6">
+                        <span class="px-3 py-1 bg-dark-700 text-gray-300 rounded-full text-sm">Django</span>
+                        <span class="px-3 py-1 bg-dark-700 text-gray-300 rounded-full text-sm">Python</span>
+                        <span class="px-3 py-1 bg-dark-700 text-gray-300 rounded-full text-sm">Tailwind CSS</span>
+                    </div>
+                    <a href="project-pictale.html" class="inline-block px-6 py-2 bg-primary text-white rounded-lg hover:bg-blue-600 transition font-semibold">View Details</a>
+                </div>
+
+                <!-- Project 2: sonicRadar -->
+                <div class="bg-dark-800 rounded-xl p-6 border border-gray-700 hover:border-primary transition group">
+                    <h3 class="text-2xl font-bold text-white mb-3 group-hover:text-primary transition">sonicRadar</h3>
+                    <p class="text-gray-400 mb-4">Radar-style object detection system using ultrasonic sensor and servo motor with 180° scanning and real-time visualization.</p>
+                    <div class="flex flex-wrap gap-2 mb-6">
+                        <span class="px-3 py-1 bg-dark-700 text-gray-300 rounded-full text-sm">Arduino</span>
+                        <span class="px-3 py-1 bg-dark-700 text-gray-300 rounded-full text-sm">Embedded C++</span>
+                        <span class="px-3 py-1 bg-dark-700 text-gray-300 rounded-full text-sm">HC-SR04</span>
+                    </div>
+                    <a href="project-sonicradar.html" class="inline-block px-6 py-2 bg-primary text-white rounded-lg hover:bg-blue-600 transition font-semibold">View Details</a>
+                </div>
+
+                <!-- Project 3: EMI Calculator -->
+                <div class="bg-dark-800 rounded-xl p-6 border border-gray-700 hover:border-primary transition group">
+                    <h3 class="text-2xl font-bold text-white mb-3 group-hover:text-primary transition">EMI Calculator</h3>
+                    <p class="text-gray-400 mb-4">Django-based web application to calculate loan EMI based on principal, interest rate, and tenure with dynamic calculation.</p>
+                    <div class="flex flex-wrap gap-2 mb-6">
+                        <span class="px-3 py-1 bg-dark-700 text-gray-300 rounded-full text-sm">Django</span>
+                        <span class="px-3 py-1 bg-dark-700 text-gray-300 rounded-full text-sm">Python</span>
+                        <span class="px-3 py-1 bg-dark-700 text-gray-300 rounded-full text-sm">Tailwind CSS</span>
+                    </div>
+                    <a href="project-emi.html" class="inline-block px-6 py-2 bg-primary text-white rounded-lg hover:bg-blue-600 transition font-semibold">View Details</a>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Certificates Section -->
+    <section id="certificates" class="py-20 px-6 bg-dark-800">
+        <div class="max-w-7xl mx-auto">
+            <h2 class="text-4xl md:text-5xl font-bold text-white mb-12 text-center">Certifications</h2>
+            <div class="grid md:grid-cols-3 gap-6">
+                
+                <!-- Certificate 1 -->
+                <div class="bg-dark-700 rounded-xl p-6 border border-gray-600 hover:border-primary transition">
+                    <h3 class="text-xl font-bold text-white mb-2">German - I</h3>
+                    <p class="text-primary mb-2">NPTEL</p>
+                    <p class="text-gray-400 text-sm mb-4">Nov 2025</p>
+                    <a href="certificates.html" class="inline-block px-4 py-2 bg-dark-600 text-white rounded-lg hover:bg-dark-500 transition text-sm">View Certificate</a>
+                </div>
+
+                <!-- Certificate 2 -->
+                <div class="bg-dark-700 rounded-xl p-6 border border-gray-600 hover:border-primary transition">
+                    <h3 class="text-xl font-bold text-white mb-2">SQL (Basic)</h3>
+                    <p class="text-primary mb-2">HackerRank</p>
+                    <p class="text-gray-400 text-sm mb-4">Jul 2025</p>
+                    <a href="certificates.html" class="inline-block px-4 py-2 bg-dark-600 text-white rounded-lg hover:bg-dark-500 transition text-sm">View Certificate</a>
+                </div>
+
+                <!-- Certificate 3 -->
+                <div class="bg-dark-700 rounded-xl p-6 border border-gray-600 hover:border-primary transition">
+                    <h3 class="text-xl font-bold text-white mb-2">Python for Problem Solving - 1</h3>
+                    <p class="text-primary mb-2">CodeChef</p>
+                    <p class="text-gray-400 text-sm mb-4">Jun 2023</p>
+                    <a href="certificates.html" class="inline-block px-4 py-2 bg-dark-600 text-white rounded-lg hover:bg-dark-500 transition text-sm">View Certificate</a>
+                </div>
+
+            </div>
+            <div class="text-center mt-8">
+                <a href="certificates.html" class="inline-block px-8 py-3 bg-primary text-white rounded-lg hover:bg-blue-600 transition font-semibold">View All Certificates</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-20 px-6 bg-dark-800">
+        <div class="max-w-4xl mx-auto text-center">
+            <h2 class="text-4xl md:text-5xl font-bold text-white mb-12">Get In Touch</h2>
+            <div class="flex flex-wrap justify-center gap-6">
+                <a href="mailto:vipul.pawar@example.com" class="flex items-center gap-3 px-6 py-4 bg-dark-700 rounded-lg hover:bg-dark-600 transition border border-gray-700">
+                    <span class="text-2xl">✉</span>
+                    <span class="text-lg text-gray-300">Email</span>
+                </a>
+                <a href="https://linkedin.com/in/vipul-pawar" target="_blank" class="flex items-center gap-3 px-6 py-4 bg-dark-700 rounded-lg hover:bg-dark-600 transition border border-gray-700">
+                    <span class="text-2xl">💼</span>
+                    <span class="text-lg text-gray-300">LinkedIn</span>
+                </a>
+                <a href="https://github.com/vipul-pawar" target="_blank" class="flex items-center gap-3 px-6 py-4 bg-dark-700 rounded-lg hover:bg-dark-600 transition border border-gray-700">
+                    <span class="text-2xl">🐙</span>
+                    <span class="text-lg text-gray-300">GitHub</span>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-8 px-6 border-t border-gray-800">
+        <div class="max-w-4xl mx-auto text-center">
+            <p class="text-gray-500">© 2026 Vipul Pawar. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile menu toggle
+        const menuBtn = document.getElementById('menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        
+        menuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Close mobile menu when clicking a link
+        mobileMenu.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+            });
+        });
+    </script>
+
+</body>
+</html>

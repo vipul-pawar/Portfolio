@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Certificates - Vipul Pawar</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#3b82f6',
+                        dark: {
+                            900: '#0a0a0a',
+                            800: '#1a1a1a',
+                            700: '#2a2a2a',
+                            600: '#3a3a3a'
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-dark-900 text-gray-300 font-sans">
+
+    <!-- Navigation -->
+    <nav class="fixed top-0 w-full bg-dark-900/95 backdrop-blur-sm z-50 border-b border-gray-800">
+        <div class="max-w-7xl mx-auto px-6 py-4">
+            <div class="flex justify-between items-center">
+                <a href="index.html" class="text-2xl font-bold text-white">VP</a>
+                <div class="hidden md:flex space-x-8">
+                    <a href="index.html" class="hover:text-primary transition">Home</a>
+                    <a href="index.html#projects" class="hover:text-primary transition">Projects</a>
+                    <a href="certificates.html" class="text-primary font-semibold">Certificates</a>
+                    <a href="index.html#contact" class="hover:text-primary transition">Contact</a>
+                </div>
+                <button id="menu-btn" class="md:hidden text-2xl">☰</button>
+            </div>
+            <div id="mobile-menu" class="hidden md:hidden mt-4 space-y-4">
+                <a href="index.html" class="block hover:text-primary transition">Home</a>
+                <a href="index.html#projects" class="block hover:text-primary transition">Projects</a>
+                <a href="certificates.html" class="block text-primary font-semibold">Certificates</a>
+                <a href="index.html#contact" class="block hover:text-primary transition">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Header -->
+    <section class="pt-32 pb-16 px-6">
+        <div class="max-w-7xl mx-auto">
+            <h1 class="text-5xl md:text-6xl font-bold text-white mb-4">Certifications</h1>
+            <p class="text-xl text-gray-400">Professional certifications and achievements</p>
+        </div>
+    </section>
+
+    <!-- Certificates Grid -->
+    <section class="py-12 px-6 bg-dark-800">
+        <div class="max-w-7xl mx-auto">
+            <div class="grid md:grid-cols-3 gap-8">
+                
+                <!-- Certificate 1: German - I -->
+                <div class="bg-dark-700 rounded-xl p-6 border border-gray-600 hover:border-primary transition group">
+                    <div class="mb-4">
+                        <div class="text-4xl mb-4">🎓</div>
+                        <h3 class="text-xl font-bold text-white mb-2 group-hover:text-primary transition">German - I</h3>
+                    </div>
+                    <div class="space-y-3 mb-6">
+                        <div>
+                            <p class="text-sm text-gray-400 mb-1">Issuer</p>
+                            <p class="text-white font-semibold">NPTEL</p>
+                        </div>
+                        <div>
+                            <p class="text-sm text-gray-400 mb-1">Issue Date</p>
+                            <p class="text-white">Nov 2025</p>
+                        </div>
+                        <div>
+                            <p class="text-sm text-gray-400 mb-1">Skills</p>
+                            <div class="flex flex-wrap gap-2">
+                                <span class="px-3 py-1 bg-dark-600 text-gray-300 rounded-full text-sm">German A1</span>
+                            </div>
+                        </div>
+                    </div>
+                    <button class="w-full px-4 py-2 bg-primary text-white rounded-lg hover:bg-blue-600 transition font-semibold">View PDF</button>
+                </div>
+
+                <!-- Certificate 2: SQL (Basic) -->
+                <div class="bg-dark-700 rounded-xl p-6 border border-gray-600 hover:border-primary transition group">
+                    <div class="mb-4">
+                        <div class="text-4xl mb-4">🎓</div>
+                        <h3 class="text-xl font-bold text-white mb-2 group-hover:text-primary transition">SQL (Basic)</h3>
+                    </div>
+                    <div class="space-y-3 mb-6">
+                        <div>
+                            <p class="text-sm text-gray-400 mb-1">Issuer</p>
+                            <p class="text-white font-semibold">HackerRank</p>
+                        </div>
+                        <div>
+                            <p class="text-sm text-gray-400 mb-1">Issue Date</p>
+                            <p class="text-white">Jul 2025</p>
+                        </div>
+                        <div>
+                            <p class="text-sm text-gray-400 mb-1">Skills</p>
+                            <div class="flex flex-wrap gap-2">
+                                <span class="px-3 py-1 bg-dark-600 text-gray-300 rounded-full text-sm">SQL</span>
+                            </div>
+                        </div>
+                    </div>
+                    <a href="#" target="_blank" class="block w-full px-4 py-2 bg-primary text-white rounded-lg hover:bg-blue-600 transition font-semibold text-center">View Credential</a>
+                </div>
+
+                <!-- Certificate 3: Python for Problem Solving - 1 -->
+                <div class="bg-dark-700 rounded-xl p-6 border border-gray-600 hover:border-primary transition group">
+                    <div class="mb-4">
+                        <div class="text-4xl mb-4">🎓</div>
+                        <h3 class="text-xl font-bold text-white mb-2 group-hover:text-primary transition">Python for Problem Solving - 1</h3>
+                    </div>
+                    <div class="space-y-3 mb-6">
+                        <div>
+                            <p class="text-sm text-gray-400 mb-1">Issuer</p>
+                            <p class="text-white font-semibold">CodeChef</p>
+                        </div>
+                        <div>
+                            <p class="text-sm text-gray-400 mb-1">Issue Date</p>
+                            <p class="text-white">Jun 2023</p>
+                        </div>
+                        <div>
+                            <p class="text-sm text-gray-400 mb-1">Skills</p>
+                            <div class="flex flex-wrap gap-2">
+                                <span class="px-3 py-1 bg-dark-600 text-gray-300 rounded-full text-sm">Python</span>
+                            </div>
+                        </div>
+                    </div>
+                    <a href="#" target="_blank" class="block w-full px-4 py-2 bg-primary text-white rounded-lg hover:bg-blue-600 transition font-semibold text-center">View Credential</a>
+                </div>
+
+                <!-- Certificate 4: MATLAB Onramp -->
+                <div class="bg-dark-700 rounded-xl p-6 border border-gray-600 hover:border-primary transition group">
+                    <div class="mb-4">
+                        <div class="text-4xl mb-4">🎓</div>
+                        <h3 class="text-xl font-bold text-white mb-2 group-hover:text-primary transition">MATLAB Onramp</h3>
+                    </div>
+                    <div class="space-y-3 mb-6">
+                        <div>
+                            <p class="text-sm text-gray-400 mb-1">Issuer</p>
+                            <p class="text-white font-semibold">MathWorks</p>
+                        </div>
+                        <div>
+                            <p class="text-sm text-gray-400 mb-1">Issue Date</p>
+                            <p class="text-white">Nov 2024</p>
+                        </div>
+                        <div>
+                            <p class="text-sm text-gray-400 mb-1">Skills</p>
+                            <div class="flex flex-wrap gap-2">
+                                <span class="px-3 py-1 bg-dark-600 text-gray-300 rounded-full text-sm">MATLAB</span>
+                            </div>
+                        </div>
+                    </div>
+                    <a href="#" target="_blank" class="block w-full px-4 py-2 bg-primary text-white rounded-lg hover:bg-blue-600 transition font-semibold text-center">View Credential</a>
+                </div>
+
+                <!-- Certificate 5: Introduction to Programming Using Python -->
+                <div class="bg-dark-700 rounded-xl p-6 border border-gray-600 hover:border-primary transition group">
+                    <div class="mb-4">
+                        <div class="text-4xl mb-4">🎓</div>
+                        <h3 class="text-xl font-bold text-white mb-2 group-hover:text-primary transition">Introduction to Programming Using Python</h3>
+                    </div>
+                    <div class="space-y-3 mb-6">
+                        <div>
+                            <p class="text-sm text-gray-400 mb-1">Issuer</p>
+                            <p class="text-white font-semibold">CodeChef</p>
+                        </div>
+                        <div>
+                            <p class="text-sm text-gray-400 mb-1">Issue Date</p>
+                            <p class="text-white">Jun 2023</p>
+                        </div>
+                        <div>
+                            <p class="text-sm text-gray-400 mb-1">Skills</p>
+                            <div class="flex flex-wrap gap-2">
+                                <span class="px-3 py-1 bg-dark-600 text-gray-300 rounded-full text-sm">Python</span>
+                            </div>
+                        </div>
+                    </div>
+                    <a href="#" target="_blank" class="block w-full px-4 py-2 bg-primary text-white rounded-lg hover:bg-blue-600 transition font-semibold text-center">View Credential</a>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-8 px-6 border-t border-gray-800">
+        <div class="max-w-7xl mx-auto text-center">
+            <p class="text-gray-500">© 2026 Vipul Pawar. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        const menuBtn = document.getElementById('menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        
+        menuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        mobileMenu.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+            });
+        });
+    </script>
+
+</body>
+</html>
