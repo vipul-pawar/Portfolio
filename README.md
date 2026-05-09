@@ -257,7 +257,6 @@ To make this portfolio your own:
 ### Mobile Responsive
 ![Mobile View](images/screenshot-mobile.png)
 
-> **Note:** Add your actual screenshots to the `images/` folder and update the paths above.
 
 ---
 
