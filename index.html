@@ -248,10 +248,10 @@
     </section>
 
     <!-- About Section -->
-    <section id="about" class="py-20 px-6 bg-dark-800">
+    <section id="about" class="py-20 px-6 bg-dark-800 dark:bg-dark-800 light:bg-light-800">
         <div class="max-w-4xl mx-auto">
-            <h2 class="text-4xl md:text-5xl font-bold text-white mb-8 text-center">About Me</h2>
-            <p class="text-lg text-gray-300 leading-relaxed text-center max-w-3xl mx-auto">
+            <h2 class="text-4xl md:text-5xl font-bold text-white dark:text-white light:text-gray-900 mb-8 text-center">About Me</h2>
+            <p class="text-lg text-gray-300 dark:text-gray-300 light:text-gray-700 leading-relaxed text-center max-w-3xl mx-auto">
                 Instrumentation Engineering student with a growing focus on software development. Experienced in building real-world systems involving sensors, PLCs, and embedded programming, and currently expanding into backend development and system integration. Passionate about combining hardware and software to create intelligent and scalable solutions.
             </p>
         </div>
@@ -260,41 +260,41 @@
     <!-- Projects Section -->
     <section id="projects" class="py-20 px-6">
         <div class="max-w-7xl mx-auto">
-            <h2 class="text-4xl md:text-5xl font-bold text-white mb-12 text-center">Featured Projects</h2>
+            <h2 class="text-4xl md:text-5xl font-bold text-white dark:text-white light:text-gray-900 mb-12 text-center">Featured Projects</h2>
             <div class="grid md:grid-cols-3 gap-8">
                 
                 <!-- Project 1: PicTale -->
-                <div class="bg-dark-800 rounded-xl p-6 border border-gray-700 hover:border-primary transition group">
-                    <h3 class="text-2xl font-bold text-white mb-3 group-hover:text-primary transition">PicTale</h3>
-                    <p class="text-gray-400 mb-4">Django-based full-stack web application with CRUD operations for photos and videos, secure authentication, and admin dashboard.</p>
+                <div class="gradient-border bg-dark-800 dark:bg-dark-800 light:bg-light-800 rounded-xl p-6 border border-gray-700 dark:border-gray-700 light:border-gray-400 hover:border-primary transition group">
+                    <h3 class="text-2xl font-bold text-white dark:text-white light:text-gray-900 mb-3 group-hover:text-primary transition">PicTale</h3>
+                    <p class="text-gray-400 dark:text-gray-400 light:text-gray-600 mb-4">Django-based full-stack web application with CRUD operations for photos and videos, secure authentication, and admin dashboard.</p>
                     <div class="flex flex-wrap gap-2 mb-6">
-                        <span class="px-3 py-1 bg-dark-700 text-gray-300 rounded-full text-sm">Django</span>
-                        <span class="px-3 py-1 bg-dark-700 text-gray-300 rounded-full text-sm">Python</span>
-                        <span class="px-3 py-1 bg-dark-700 text-gray-300 rounded-full text-sm">Tailwind CSS</span>
+                        <span class="px-3 py-1 bg-dark-700 dark:bg-dark-700 light:bg-light-700 text-gray-300 dark:text-gray-300 light:text-gray-700 rounded-full text-sm">Django</span>
+                        <span class="px-3 py-1 bg-dark-700 dark:bg-dark-700 light:bg-light-700 text-gray-300 dark:text-gray-300 light:text-gray-700 rounded-full text-sm">Python</span>
+                        <span class="px-3 py-1 bg-dark-700 dark:bg-dark-700 light:bg-light-700 text-gray-300 dark:text-gray-300 light:text-gray-700 rounded-full text-sm">Tailwind CSS</span>
                     </div>
                     <a href="project-pictale.html" class="inline-block px-6 py-2 bg-primary text-white rounded-lg hover:bg-blue-600 transition font-semibold">View Details</a>
                 </div>
 
                 <!-- Project 2: sonicRadar -->
-                <div class="bg-dark-800 rounded-xl p-6 border border-gray-700 hover:border-primary transition group">
-                    <h3 class="text-2xl font-bold text-white mb-3 group-hover:text-primary transition">sonicRadar</h3>
-                    <p class="text-gray-400 mb-4">Radar-style object detection system using ultrasonic sensor and servo motor with 180° scanning and real-time visualization.</p>
+                <div class="gradient-border bg-dark-800 dark:bg-dark-800 light:bg-light-800 rounded-xl p-6 border border-gray-700 dark:border-gray-700 light:border-gray-400 hover:border-primary transition group">
+                    <h3 class="text-2xl font-bold text-white dark:text-white light:text-gray-900 mb-3 group-hover:text-primary transition">sonicRadar</h3>
+                    <p class="text-gray-400 dark:text-gray-400 light:text-gray-600 mb-4">Radar-style object detection system using ultrasonic sensor and servo motor with 180° scanning and real-time visualization.</p>
                     <div class="flex flex-wrap gap-2 mb-6">
-                        <span class="px-3 py-1 bg-dark-700 text-gray-300 rounded-full text-sm">Arduino</span>
-                        <span class="px-3 py-1 bg-dark-700 text-gray-300 rounded-full text-sm">Embedded C++</span>
-                        <span class="px-3 py-1 bg-dark-700 text-gray-300 rounded-full text-sm">HC-SR04</span>
+                        <span class="px-3 py-1 bg-dark-700 dark:bg-dark-700 light:bg-light-700 text-gray-300 dark:text-gray-300 light:text-gray-700 rounded-full text-sm">Arduino</span>
+                        <span class="px-3 py-1 bg-dark-700 dark:bg-dark-700 light:bg-light-700 text-gray-300 dark:text-gray-300 light:text-gray-700 rounded-full text-sm">Embedded C++</span>
+                        <span class="px-3 py-1 bg-dark-700 dark:bg-dark-700 light:bg-light-700 text-gray-300 dark:text-gray-300 light:text-gray-700 rounded-full text-sm">HC-SR04</span>
                     </div>
                     <a href="project-sonicradar.html" class="inline-block px-6 py-2 bg-primary text-white rounded-lg hover:bg-blue-600 transition font-semibold">View Details</a>
                 </div>
 
                 <!-- Project 3: EMI Calculator -->
-                <div class="bg-dark-800 rounded-xl p-6 border border-gray-700 hover:border-primary transition group">
-                    <h3 class="text-2xl font-bold text-white mb-3 group-hover:text-primary transition">EMI Calculator</h3>
-                    <p class="text-gray-400 mb-4">Django-based web application to calculate loan EMI based on principal, interest rate, and tenure with dynamic calculation.</p>
+                <div class="gradient-border bg-dark-800 dark:bg-dark-800 light:bg-light-800 rounded-xl p-6 border border-gray-700 dark:border-gray-700 light:border-gray-400 hover:border-primary transition group">
+                    <h3 class="text-2xl font-bold text-white dark:text-white light:text-gray-900 mb-3 group-hover:text-primary transition">EMI Calculator</h3>
+                    <p class="text-gray-400 dark:text-gray-400 light:text-gray-600 mb-4">Django-based web application to calculate loan EMI based on principal, interest rate, and tenure with dynamic calculation.</p>
                     <div class="flex flex-wrap gap-2 mb-6">
-                        <span class="px-3 py-1 bg-dark-700 text-gray-300 rounded-full text-sm">Django</span>
-                        <span class="px-3 py-1 bg-dark-700 text-gray-300 rounded-full text-sm">Python</span>
-                        <span class="px-3 py-1 bg-dark-700 text-gray-300 rounded-full text-sm">Tailwind CSS</span>
+                        <span class="px-3 py-1 bg-dark-700 dark:bg-dark-700 light:bg-light-700 text-gray-300 dark:text-gray-300 light:text-gray-700 rounded-full text-sm">Django</span>
+                        <span class="px-3 py-1 bg-dark-700 dark:bg-dark-700 light:bg-light-700 text-gray-300 dark:text-gray-300 light:text-gray-700 rounded-full text-sm">Python</span>
+                        <span class="px-3 py-1 bg-dark-700 dark:bg-dark-700 light:bg-light-700 text-gray-300 dark:text-gray-300 light:text-gray-700 rounded-full text-sm">Tailwind CSS</span>
                     </div>
                     <a href="project-emi.html" class="inline-block px-6 py-2 bg-primary text-white rounded-lg hover:bg-blue-600 transition font-semibold">View Details</a>
                 </div>
@@ -304,33 +304,33 @@
     </section>
 
     <!-- Certificates Section -->
-    <section id="certificates" class="py-20 px-6 bg-dark-800">
+    <section id="certificates" class="py-20 px-6 bg-dark-800 dark:bg-dark-800 light:bg-light-800">
         <div class="max-w-7xl mx-auto">
-            <h2 class="text-4xl md:text-5xl font-bold text-white mb-12 text-center">Certifications</h2>
+            <h2 class="text-4xl md:text-5xl font-bold text-white dark:text-white light:text-gray-900 mb-12 text-center">Certifications</h2>
             <div class="grid md:grid-cols-3 gap-6">
                 
                 <!-- Certificate 1 -->
-                <div class="bg-dark-700 rounded-xl p-6 border border-gray-600 hover:border-primary transition">
-                    <h3 class="text-xl font-bold text-white mb-2">German - I</h3>
+                <div class="bg-dark-700 dark:bg-dark-700 light:bg-light-700 rounded-xl p-6 border border-gray-600 dark:border-gray-600 light:border-gray-400 hover:border-primary transition">
+                    <h3 class="text-xl font-bold text-white dark:text-white light:text-gray-900 mb-2">German - I</h3>
                     <p class="text-primary mb-2">NPTEL</p>
-                    <p class="text-gray-400 text-sm mb-4">Nov 2025</p>
-                    <a href="certificates.html" class="inline-block px-4 py-2 bg-dark-600 text-white rounded-lg hover:bg-dark-500 transition text-sm">View Certificate</a>
+                    <p class="text-gray-400 dark:text-gray-400 light:text-gray-600 text-sm mb-4">Nov 2025</p>
+                    <a href="certificates.html" class="inline-block px-4 py-2 bg-dark-600 dark:bg-dark-600 light:bg-light-600 text-white dark:text-white light:text-gray-900 rounded-lg hover:bg-dark-500 light:hover:bg-light-500 transition text-sm">View Certificate</a>
                 </div>
 
                 <!-- Certificate 2 -->
-                <div class="bg-dark-700 rounded-xl p-6 border border-gray-600 hover:border-primary transition">
-                    <h3 class="text-xl font-bold text-white mb-2">SQL (Basic)</h3>
+                <div class="bg-dark-700 dark:bg-dark-700 light:bg-light-700 rounded-xl p-6 border border-gray-600 dark:border-gray-600 light:border-gray-400 hover:border-primary transition">
+                    <h3 class="text-xl font-bold text-white dark:text-white light:text-gray-900 mb-2">SQL (Basic)</h3>
                     <p class="text-primary mb-2">HackerRank</p>
-                    <p class="text-gray-400 text-sm mb-4">Jul 2025</p>
-                    <a href="certificates.html" class="inline-block px-4 py-2 bg-dark-600 text-white rounded-lg hover:bg-dark-500 transition text-sm">View Certificate</a>
+                    <p class="text-gray-400 dark:text-gray-400 light:text-gray-600 text-sm mb-4">Jul 2025</p>
+                    <a href="certificates.html" class="inline-block px-4 py-2 bg-dark-600 dark:bg-dark-600 light:bg-light-600 text-white dark:text-white light:text-gray-900 rounded-lg hover:bg-dark-500 light:hover:bg-light-500 transition text-sm">View Certificate</a>
                 </div>
 
                 <!-- Certificate 3 -->
-                <div class="bg-dark-700 rounded-xl p-6 border border-gray-600 hover:border-primary transition">
-                    <h3 class="text-xl font-bold text-white mb-2">Python for Problem Solving - 1</h3>
+                <div class="bg-dark-700 dark:bg-dark-700 light:bg-light-700 rounded-xl p-6 border border-gray-600 dark:border-gray-600 light:border-gray-400 hover:border-primary transition">
+                    <h3 class="text-xl font-bold text-white dark:text-white light:text-gray-900 mb-2">Python for Problem Solving - 1</h3>
                     <p class="text-primary mb-2">CodeChef</p>
-                    <p class="text-gray-400 text-sm mb-4">Jun 2023</p>
-                    <a href="certificates.html" class="inline-block px-4 py-2 bg-dark-600 text-white rounded-lg hover:bg-dark-500 transition text-sm">View Certificate</a>
+                    <p class="text-gray-400 dark:text-gray-400 light:text-gray-600 text-sm mb-4">Jun 2023</p>
+                    <a href="certificates.html" class="inline-block px-4 py-2 bg-dark-600 dark:bg-dark-600 light:bg-light-600 text-white dark:text-white light:text-gray-900 rounded-lg hover:bg-dark-500 light:hover:bg-light-500 transition text-sm">View Certificate</a>
                 </div>
 
             </div>
@@ -341,34 +341,78 @@
     </section>
 
     <!-- Contact Section -->
-    <section id="contact" class="py-20 px-6 bg-dark-800">
+    <section id="contact" class="py-20 px-6 bg-dark-800 dark:bg-dark-800 light:bg-light-800">
         <div class="max-w-4xl mx-auto text-center">
-            <h2 class="text-4xl md:text-5xl font-bold text-white mb-12">Get In Touch</h2>
+            <h2 class="text-4xl md:text-5xl font-bold text-white dark:text-white light:text-gray-900 mb-12">Get In Touch</h2>
             <div class="flex flex-wrap justify-center gap-6">
-                <a href="mailto:vipulpawar311@gmail.com" class="flex items-center gap-3 px-6 py-4 bg-dark-700 rounded-lg hover:bg-dark-600 transition border border-gray-700">
+                <a href="mailto:vipulpawar311@gmail.com" class="flex items-center gap-3 px-6 py-4 bg-dark-700 dark:bg-dark-700 light:bg-light-700 rounded-lg hover:bg-dark-600 light:hover:bg-light-600 transition border border-gray-700 dark:border-gray-700 light:border-gray-400">
                     <span class="text-2xl">✉</span>
-                    <span class="text-lg text-gray-300">Email</span>
+                    <span class="text-lg text-gray-300 dark:text-gray-300 light:text-gray-700">Email</span>
                 </a>
-                <a href="https://www.linkedin.com/in/vipul-pawar-gcoea" target="_blank" class="flex items-center gap-3 px-6 py-4 bg-dark-700 rounded-lg hover:bg-dark-600 transition border border-gray-700">
+                <a href="https://www.linkedin.com/in/vipul-pawar-gcoea" target="_blank" class="flex items-center gap-3 px-6 py-4 bg-dark-700 dark:bg-dark-700 light:bg-light-700 rounded-lg hover:bg-dark-600 light:hover:bg-light-600 transition border border-gray-700 dark:border-gray-700 light:border-gray-400">
                     <span class="text-2xl">💼</span>
-                    <span class="text-lg text-gray-300">LinkedIn</span>
+                    <span class="text-lg text-gray-300 dark:text-gray-300 light:text-gray-700">LinkedIn</span>
                 </a>
-                <a href="https://github.com/vipul-pawar" target="_blank" class="flex items-center gap-3 px-6 py-4 bg-dark-700 rounded-lg hover:bg-dark-600 transition border border-gray-700">
+                <a href="https://github.com/vipul-pawar" target="_blank" class="flex items-center gap-3 px-6 py-4 bg-dark-700 dark:bg-dark-700 light:bg-light-700 rounded-lg hover:bg-dark-600 light:hover:bg-light-600 transition border border-gray-700 dark:border-gray-700 light:border-gray-400">
                     <span class="text-2xl">🐙</span>
-                    <span class="text-lg text-gray-300">GitHub</span>
+                    <span class="text-lg text-gray-300 dark:text-gray-300 light:text-gray-700">GitHub</span>
                 </a>
             </div>
         </div>
     </section>
 
     <!-- Footer -->
-    <footer class="py-8 px-6 border-t border-gray-800">
+    <footer class="py-8 px-6 border-t border-gray-800 dark:border-gray-800 light:border-gray-400">
         <div class="max-w-4xl mx-auto text-center">
-            <p class="text-gray-500">© 2026 Vipul Pawar. All rights reserved.</p>
+            <p class="text-gray-500 dark:text-gray-500 light:text-gray-600">© 2026 Vipul Pawar. All rights reserved.</p>
         </div>
     </footer>
 
     <script>
+        // Theme Toggle Functionality
+        const themeToggle = document.getElementById('theme-toggle');
+        const themeToggleMobile = document.getElementById('theme-toggle-mobile');
+        const themeIcon = document.getElementById('theme-icon');
+        const themeIconMobile = document.getElementById('theme-icon-mobile');
+        const html = document.documentElement;
+        const body = document.body;
+
+        // Check for saved theme preference or default to dark
+        const currentTheme = localStorage.getItem('theme') || 'dark';
+        if (currentTheme === 'light') {
+            html.classList.remove('dark');
+            html.classList.add('light');
+            body.classList.remove('bg-dark-900', 'text-gray-300');
+            body.classList.add('bg-light-900', 'text-gray-700');
+            themeIcon.textContent = '☀️';
+            themeIconMobile.textContent = '☀️';
+        }
+
+        function toggleTheme() {
+            if (html.classList.contains('dark')) {
+                // Switch to light mode
+                html.classList.remove('dark');
+                html.classList.add('light');
+                body.classList.remove('bg-dark-900', 'text-gray-300');
+                body.classList.add('bg-light-900', 'text-gray-700');
+                themeIcon.textContent = '☀️';
+                themeIconMobile.textContent = '☀️';
+                localStorage.setItem('theme', 'light');
+            } else {
+                // Switch to dark mode
+                html.classList.remove('light');
+                html.classList.add('dark');
+                body.classList.remove('bg-light-900', 'text-gray-700');
+                body.classList.add('bg-dark-900', 'text-gray-300');
+                themeIcon.textContent = '🌙';
+                themeIconMobile.textContent = '🌙';
+                localStorage.setItem('theme', 'dark');
+            }
+        }
+
+        themeToggle.addEventListener('click', toggleTheme);
+        themeToggleMobile.addEventListener('click', toggleTheme);
+
         // Mobile menu toggle
         const menuBtn = document.getElementById('menu-btn');
         const mobileMenu = document.getElementById('mobile-menu');
@@ -381,6 +425,34 @@
         mobileMenu.querySelectorAll('a').forEach(link => {
             link.addEventListener('click', () => {
                 mobileMenu.classList.add('hidden');
+            });
+        });
+
+        // Create dynamic particles
+        const particlesContainer = document.getElementById('particles');
+        for (let i = 0; i < 20; i++) {
+            const particle = document.createElement('div');
+            particle.className = 'particle';
+            particle.style.width = Math.random() * 6 + 2 + 'px';
+            particle.style.height = particle.style.width;
+            particle.style.left = Math.random() * 100 + '%';
+            particle.style.top = Math.random() * 100 + '%';
+            particle.style.animationDuration = Math.random() * 4 + 4 + 's';
+            particle.style.animationDelay = Math.random() * 4 + 's';
+            particlesContainer.appendChild(particle);
+        }
+
+        // Smooth scroll for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
             });
         });
     </script>
