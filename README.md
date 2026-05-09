@@ -238,22 +238,6 @@ To make this portfolio your own:
 
 ## 🌐 Deployment
 
-### GitHub Pages (Free)
-
-1. Push your code to GitHub
-2. Go to repository **Settings** → **Pages**
-3. Select `main` branch as source
-4. Your site will be live at: `https://yourusername.github.io/portfolio/`
-
-### Vercel (Free)
-
-```bash
-# Install Vercel CLI
-npm i -g vercel
-
-# Deploy
-vercel
-```
 
 ### Netlify (Free)
 
@@ -301,6 +285,6 @@ This project is open source and available under the [MIT License](LICENSE).
 
 **Made with ❤️ by Vipul Pawar**
 
-[![Portfolio](https://img.shields.io/badge/Visit-Portfolio-brightgreen?style=for-the-badge)](https://your-portfolio-url.com)
+[![Portfolio](https://img.shields.io/badge/Visit-Portfolio-brightgreen?style=for-the-badge)](https://poetic-croquembouche-2f502e.netlify.app/)
 
 </div>
