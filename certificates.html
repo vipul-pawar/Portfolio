@@ -7,6 +7,7 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
         tailwind.config = {
+            darkMode: 'class',
             theme: {
                 extend: {
                     colors: {
@@ -16,33 +17,66 @@
                             800: '#1a1a1a',
                             700: '#2a2a2a',
                             600: '#3a3a3a'
+                        },
+                        light: {
+                            900: '#ffffff',
+                            800: '#f3f4f6',
+                            700: '#e5e7eb',
+                            600: '#d1d5db'
                         }
                     }
                 }
             }
         }
     </script>
+    <style>
+        * { transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease; }
+        .dark body { background-color: #0a0a0a; color: #d1d5db; }
+        .dark .bg-dark-800 { background-color: #1a1a1a; }
+        .dark .bg-dark-700 { background-color: #2a2a2a; }
+        .dark .text-white { color: #ffffff; }
+        .dark .text-gray-300 { color: #d1d5db; }
+        .dark .text-gray-400 { color: #9ca3af; }
+        .dark .border-gray-700, .dark .border-gray-600 { border-color: #374151; }
+        .light body { background-color: #ffffff; color: #374151; }
+        .light .bg-dark-900 { background-color: #ffffff; }
+        .light .bg-dark-800 { background-color: #f3f4f6; }
+        .light .bg-dark-700 { background-color: #e5e7eb; }
+        .light .bg-dark-600 { background-color: #d1d5db; }
+        .light .text-white { color: #111827; }
+        .light .text-gray-300 { color: #4b5563; }
+        .light .text-gray-400 { color: #6b7280; }
+        .light .border-gray-700, .light .border-gray-600 { border-color: #d1d5db; }
+    </style>
 </head>
-<body class="bg-dark-900 text-gray-300 font-sans">
+<body class="bg-dark-900 text-gray-300 font-sans dark">
 
     <!-- Navigation -->
-    <nav class="fixed top-0 w-full bg-dark-900/95 backdrop-blur-sm z-50 border-b border-gray-800">
+    <nav class="fixed top-0 w-full bg-dark-900/95 backdrop-blur-sm z-50 border-b border-gray-800 dark:border-gray-800 light:border-gray-300">
         <div class="max-w-7xl mx-auto px-6 py-4">
             <div class="flex justify-between items-center">
-                <a href="index.html" class="text-2xl font-bold text-white">VP</a>
-                <div class="hidden md:flex space-x-8">
-                    <a href="index.html" class="hover:text-primary transition">Home</a>
-                    <a href="index.html#projects" class="hover:text-primary transition">Projects</a>
-                    <a href="certificates.html" class="text-primary font-semibold">Certificates</a>
-                    <a href="index.html#contact" class="hover:text-primary transition">Contact</a>
+                <a href="index.html" class="text-2xl font-bold text-white dark:text-white light:text-gray-900">VP</a>
+                <div class="hidden md:flex space-x-8 items-center">
+                    <a href="index.html" class="hover:text-primary transition dark:text-gray-300 light:text-gray-700">Home</a>
+                    <a href="index.html#projects" class="hover:text-primary transition dark:text-gray-300 light:text-gray-700">Projects</a>
+                    <a href="certificates.html" class="text-primary font-semibold dark:text-primary light:text-primary">Certificates</a>
+                    <a href="index.html#contact" class="hover:text-primary transition dark:text-gray-300 light:text-gray-700">Contact</a>
+                    <button id="theme-toggle" class="p-2 rounded-lg bg-dark-700 dark:bg-dark-700 light:bg-light-700 hover:bg-dark-600 light:hover:bg-light-600 transition">
+                        <span id="theme-icon" class="text-xl">🌙</span>
+                    </button>
                 </div>
-                <button id="menu-btn" class="md:hidden text-2xl">☰</button>
+                <div class="flex items-center gap-4 md:hidden">
+                    <button id="theme-toggle-mobile" class="p-2 rounded-lg bg-dark-700 dark:bg-dark-700 light:bg-light-700">
+                        <span id="theme-icon-mobile" class="text-xl">🌙</span>
+                    </button>
+                    <button id="menu-btn" class="text-2xl dark:text-white light:text-gray-900">☰</button>
+                </div>
             </div>
             <div id="mobile-menu" class="hidden md:hidden mt-4 space-y-4">
-                <a href="index.html" class="block hover:text-primary transition">Home</a>
-                <a href="index.html#projects" class="block hover:text-primary transition">Projects</a>
-                <a href="certificates.html" class="block text-primary font-semibold">Certificates</a>
-                <a href="index.html#contact" class="block hover:text-primary transition">Contact</a>
+                <a href="index.html" class="block hover:text-primary transition dark:text-gray-300 light:text-gray-700">Home</a>
+                <a href="index.html#projects" class="block hover:text-primary transition dark:text-gray-300 light:text-gray-700">Projects</a>
+                <a href="certificates.html" class="block text-primary font-semibold dark:text-primary light:text-primary">Certificates</a>
+                <a href="index.html#contact" class="block hover:text-primary transition dark:text-gray-300 light:text-gray-700">Contact</a>
             </div>
         </div>
     </nav>
@@ -197,17 +231,51 @@
     </footer>
 
     <script>
+        const themeToggle = document.getElementById('theme-toggle');
+        const themeToggleMobile = document.getElementById('theme-toggle-mobile');
+        const themeIcon = document.getElementById('theme-icon');
+        const themeIconMobile = document.getElementById('theme-icon-mobile');
+        const html = document.documentElement;
+        const body = document.body;
+
+        const currentTheme = localStorage.getItem('theme') || 'dark';
+        if (currentTheme === 'light') {
+            html.classList.remove('dark');
+            html.classList.add('light');
+            body.classList.remove('bg-dark-900', 'text-gray-300');
+            body.classList.add('bg-light-900', 'text-gray-700');
+            themeIcon.textContent = '☀️';
+            themeIconMobile.textContent = '☀️';
+        }
+
+        function toggleTheme() {
+            if (html.classList.contains('dark')) {
+                html.classList.remove('dark');
+                html.classList.add('light');
+                body.classList.remove('bg-dark-900', 'text-gray-300');
+                body.classList.add('bg-light-900', 'text-gray-700');
+                themeIcon.textContent = '☀️';
+                themeIconMobile.textContent = '☀️';
+                localStorage.setItem('theme', 'light');
+            } else {
+                html.classList.remove('light');
+                html.classList.add('dark');
+                body.classList.remove('bg-light-900', 'text-gray-700');
+                body.classList.add('bg-dark-900', 'text-gray-300');
+                themeIcon.textContent = '🌙';
+                themeIconMobile.textContent = '🌙';
+                localStorage.setItem('theme', 'dark');
+            }
+        }
+
+        themeToggle.addEventListener('click', toggleTheme);
+        themeToggleMobile.addEventListener('click', toggleTheme);
+
         const menuBtn = document.getElementById('menu-btn');
         const mobileMenu = document.getElementById('mobile-menu');
-        
-        menuBtn.addEventListener('click', () => {
-            mobileMenu.classList.toggle('hidden');
-        });
-
+        menuBtn.addEventListener('click', () => { mobileMenu.classList.toggle('hidden'); });
         mobileMenu.querySelectorAll('a').forEach(link => {
-            link.addEventListener('click', () => {
-                mobileMenu.classList.add('hidden');
-            });
+            link.addEventListener('click', () => { mobileMenu.classList.add('hidden'); });
         });
     </script>
 
