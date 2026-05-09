@@ -7,6 +7,7 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
         tailwind.config = {
+            darkMode: 'class',
             theme: {
                 extend: {
                     colors: {
@@ -16,49 +17,232 @@
                             800: '#1a1a1a',
                             700: '#2a2a2a',
                             600: '#3a3a3a'
+                        },
+                        light: {
+                            900: '#ffffff',
+                            800: '#f3f4f6',
+                            700: '#e5e7eb',
+                            600: '#d1d5db'
                         }
+                    },
+                    animation: {
+                        'float': 'float 6s ease-in-out infinite',
+                        'float-delayed': 'float 6s ease-in-out 2s infinite',
+                        'pulse-slow': 'pulse 4s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+                        'gradient': 'gradient 8s ease infinite',
+                        'slide-up': 'slideUp 0.8s ease-out',
+                        'slide-down': 'slideDown 0.5s ease-out',
+                        'fade-in': 'fadeIn 1s ease-out',
+                        'scale-in': 'scaleIn 0.6s ease-out',
+                        'bounce-slow': 'bounce 3s infinite',
+                    },
+                    keyframes: {
+                        float: {
+                            '0%, 100%': { transform: 'translateY(0px)' },
+                            '50%': { transform: 'translateY(-20px)' },
+                        },
+                        gradient: {
+                            '0%, 100%': { backgroundPosition: '0% 50%' },
+                            '50%': { backgroundPosition: '100% 50%' },
+                        },
+                        slideUp: {
+                            '0%': { transform: 'translateY(50px)', opacity: '0' },
+                            '100%': { transform: 'translateY(0)', opacity: '1' },
+                        },
+                        slideDown: {
+                            '0%': { transform: 'translateY(-20px)', opacity: '0' },
+                            '100%': { transform: 'translateY(0)', opacity: '1' },
+                        },
+                        fadeIn: {
+                            '0%': { opacity: '0' },
+                            '100%': { opacity: '1' },
+                        },
+                        scaleIn: {
+                            '0%': { transform: 'scale(0.8)', opacity: '0' },
+                            '100%': { transform: 'scale(1)', opacity: '1' },
+                        },
                     }
                 }
             }
         }
     </script>
+    <style>
+        /* Animated gradient background */
+        .hero-gradient {
+            background: linear-gradient(-45deg, #0a0a0a, #1a1a2e, #16213e, #0f3460, #0a0a0a);
+            background-size: 400% 400%;
+            animation: gradient 15s ease infinite;
+        }
+        
+        .light .hero-gradient {
+            background: linear-gradient(-45deg, #ffffff, #e0e7ff, #c7d2fe, #a5b4fc, #ffffff);
+            background-size: 400% 400%;
+            animation: gradient 15s ease infinite;
+        }
+
+        /* Floating particles */
+        .particle {
+            position: absolute;
+            border-radius: 50%;
+            background: rgba(59, 130, 246, 0.3);
+            animation: float 6s ease-in-out infinite;
+        }
+
+        .light .particle {
+            background: rgba(59, 130, 246, 0.2);
+        }
+
+        /* Glowing text effect */
+        .glow-text {
+            text-shadow: 0 0 10px rgba(59, 130, 246, 0.5),
+                         0 0 20px rgba(59, 130, 246, 0.3),
+                         0 0 30px rgba(59, 130, 246, 0.2);
+        }
+
+        .light .glow-text {
+            text-shadow: 0 0 10px rgba(59, 130, 246, 0.3),
+                         0 0 20px rgba(59, 130, 246, 0.2);
+        }
+
+        /* Smooth transitions */
+        * {
+            transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+        }
+
+        /* Animated gradient border */
+        .gradient-border {
+            position: relative;
+            background: inherit;
+        }
+
+        .gradient-border::before {
+            content: '';
+            position: absolute;
+            inset: -2px;
+            background: linear-gradient(45deg, #3b82f6, #8b5cf6, #ec4899, #3b82f6);
+            background-size: 400% 400%;
+            animation: gradient 3s ease infinite;
+            border-radius: inherit;
+            z-index: -1;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+
+        .gradient-border:hover::before {
+            opacity: 1;
+        }
+    </style>
 </head>
-<body class="bg-dark-900 text-gray-300 font-sans">
+<body class="bg-dark-900 text-gray-300 font-sans dark">
+
+    <!-- Animated Background Particles -->
+    <div id="particles" class="fixed inset-0 pointer-events-none z-0"></div>
 
     <!-- Navigation -->
-    <nav class="fixed top-0 w-full bg-dark-900/95 backdrop-blur-sm z-50 border-b border-gray-800">
+    <nav class="fixed top-0 w-full bg-dark-900/95 dark:bg-dark-900/95 light:bg-light-900/95 backdrop-blur-sm z-50 border-b border-gray-800 dark:border-gray-800 light:border-gray-300">
         <div class="max-w-7xl mx-auto px-6 py-4">
             <div class="flex justify-between items-center">
-                <a href="#hero" class="text-2xl font-bold text-white">VP</a>
-                <div class="hidden md:flex space-x-8">
-                    <a href="index.html" class="text-primary font-semibold">Home</a>
-                    <a href="#projects" class="hover:text-primary transition">Projects</a>
-                    <a href="certificates.html" class="hover:text-primary transition">Certificates</a>
-                    <a href="#contact" class="hover:text-primary transition">Contact</a>
+                <a href="#hero" class="text-2xl font-bold text-white dark:text-white light:text-gray-900">VP</a>
+                <div class="hidden md:flex space-x-8 items-center">
+                    <a href="index.html" class="text-primary font-semibold hover:text-blue-400 transition">Home</a>
+                    <a href="#projects" class="hover:text-primary transition dark:text-gray-300 light:text-gray-700">Projects</a>
+                    <a href="certificates.html" class="hover:text-primary transition dark:text-gray-300 light:text-gray-700">Certificates</a>
+                    <a href="#contact" class="hover:text-primary transition dark:text-gray-300 light:text-gray-700">Contact</a>
+                    <!-- Theme Toggle -->
+                    <button id="theme-toggle" class="p-2 rounded-lg bg-dark-700 dark:bg-dark-700 light:bg-light-700 hover:bg-dark-600 light:hover:bg-light-600 transition">
+                        <span id="theme-icon" class="text-xl">🌙</span>
+                    </button>
                 </div>
-                <button id="menu-btn" class="md:hidden text-2xl">☰</button>
+                <div class="flex items-center gap-4 md:hidden">
+                    <button id="theme-toggle-mobile" class="p-2 rounded-lg bg-dark-700 dark:bg-dark-700 light:bg-light-700">
+                        <span id="theme-icon-mobile" class="text-xl">🌙</span>
+                    </button>
+                    <button id="menu-btn" class="text-2xl dark:text-white light:text-gray-900">☰</button>
+                </div>
             </div>
             <div id="mobile-menu" class="hidden md:hidden mt-4 space-y-4">
                 <a href="index.html" class="block text-primary font-semibold">Home</a>
-                <a href="#projects" class="block hover:text-primary transition">Projects</a>
-                <a href="certificates.html" class="block hover:text-primary transition">Certificates</a>
-                <a href="#contact" class="block hover:text-primary transition">Contact</a>
+                <a href="#projects" class="block hover:text-primary transition dark:text-gray-300 light:text-gray-700">Projects</a>
+                <a href="certificates.html" class="block hover:text-primary transition dark:text-gray-300 light:text-gray-700">Certificates</a>
+                <a href="#contact" class="block hover:text-primary transition dark:text-gray-300 light:text-gray-700">Contact</a>
             </div>
         </div>
     </nav>
 
     <!-- Hero Section -->
-    <section id="hero" class="min-h-screen flex items-center justify-center pt-20 px-6">
-        <div class="max-w-4xl mx-auto text-center">
-            <h1 class="text-5xl md:text-7xl font-bold text-white mb-6">Vipul Pawar</h1>
-            <p class="text-2xl md:text-3xl text-primary mb-4 font-semibold">Software Developer | IoT & Backend Systems</p>
-            <p class="text-lg md:text-xl text-gray-400 mb-12 max-w-3xl mx-auto">
+    <section id="hero" class="hero-gradient min-h-screen flex items-center justify-center pt-20 px-6 relative overflow-hidden">
+        <!-- Floating Particles -->
+        <div class="particle w-4 h-4 top-20 left-10 animate-float" style="animation-delay: 0s;"></div>
+        <div class="particle w-6 h-6 top-40 right-20 animate-float-delayed" style="animation-delay: 1s;"></div>
+        <div class="particle w-3 h-3 bottom-40 left-1/4 animate-float" style="animation-delay: 2s;"></div>
+        <div class="particle w-5 h-5 top-1/3 right-1/3 animate-float-delayed" style="animation-delay: 3s;"></div>
+        <div class="particle w-4 h-4 bottom-20 right-10 animate-float" style="animation-delay: 4s;"></div>
+        <div class="particle w-6 h-6 top-10 left-1/2 animate-float-delayed" style="animation-delay: 5s;"></div>
+        
+        <!-- Glowing Orbs -->
+        <div class="absolute top-1/4 left-1/4 w-64 h-64 bg-blue-500/20 rounded-full blur-3xl animate-pulse-slow"></div>
+        <div class="absolute bottom-1/4 right-1/4 w-96 h-96 bg-purple-500/20 rounded-full blur-3xl animate-pulse-slow" style="animation-delay: 2s;"></div>
+        <div class="absolute top-1/2 left-1/2 w-48 h-48 bg-pink-500/15 rounded-full blur-3xl animate-pulse-slow" style="animation-delay: 4s;"></div>
+        
+        <div class="max-w-5xl mx-auto text-center relative z-10">
+            <!-- Animated Greeting -->
+            <div class="animate-fade-in mb-6">
+                <span class="inline-block px-4 py-2 bg-primary/10 dark:bg-primary/10 light:bg-primary/5 rounded-full text-primary text-sm font-semibold mb-4 border border-primary/20">
+                    👋 Welcome to my portfolio
+                </span>
+            </div>
+            
+            <!-- Name with Glow Effect -->
+            <h1 class="text-6xl md:text-8xl font-bold text-white dark:text-white light:text-gray-900 mb-6 glow-text animate-slide-up">
+                Vipul Pawar
+            </h1>
+            
+            <!-- Title with Typing Effect Animation -->
+            <div class="animate-slide-up" style="animation-delay: 0.2s;">
+                <p class="text-2xl md:text-4xl text-primary mb-6 font-semibold">
+                    Software Developer <span class="animate-pulse">|</span> IoT & Backend Systems
+                </p>
+            </div>
+            
+            <!-- Tagline -->
+            <p class="text-lg md:text-xl text-gray-300 dark:text-gray-300 light:text-gray-700 mb-12 max-w-3xl mx-auto animate-slide-up" style="animation-delay: 0.4s;">
                 "I build software-driven systems that connect devices, data, and real-world applications."
             </p>
-            <div class="flex flex-wrap justify-center gap-4">
-                <a href="#projects" class="px-8 py-3 bg-primary text-white rounded-lg hover:bg-blue-600 transition font-semibold">View Projects</a>
-                <a href="https://github.com/vipul-pawar" target="_blank" class="px-8 py-3 bg-dark-700 text-white rounded-lg hover:bg-dark-600 transition font-semibold border border-gray-700">GitHub</a>
-                <a href="#contact" class="px-8 py-3 bg-dark-700 text-white rounded-lg hover:bg-dark-600 transition font-semibold border border-gray-700">Contact</a>
+            
+            <!-- CTA Buttons with Animation -->
+            <div class="flex flex-wrap justify-center gap-4 animate-scale-in" style="animation-delay: 0.6s;">
+                <a href="#projects" class="group relative px-8 py-4 bg-primary text-white rounded-lg hover:bg-blue-600 transition font-semibold overflow-hidden">
+                    <span class="absolute inset-0 w-full h-full bg-gradient-to-r from-blue-600 via-purple-600 to-blue-600 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></span>
+                    <span class="relative flex items-center gap-2">
+                        View Projects
+                        <svg class="w-5 h-5 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6"></path>
+                        </svg>
+                    </span>
+                </a>
+                <a href="https://github.com/vipul-pawar" target="_blank" class="group px-8 py-4 bg-dark-700/50 dark:bg-dark-700/50 light:bg-light-700/50 backdrop-blur-sm text-white dark:text-white light:text-gray-900 rounded-lg hover:bg-dark-600 light:hover:bg-light-600 transition font-semibold border border-gray-700 dark:border-gray-700 light:border-gray-400">
+                    <span class="flex items-center gap-2">
+                        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 2.614.913.762-.212 1.579-.318 2.388-.322.81.004 1.626.11 2.388.322 1.606-1.235 2.605-.913 2.605-.913.656 1.652.245 2.873.12 3.176.77.84 1.231 1.91 1.231 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+                        </svg>
+                        GitHub
+                    </span>
+                </a>
+                <a href="#contact" class="group px-8 py-4 bg-dark-700/50 dark:bg-dark-700/50 light:bg-light-700/50 backdrop-blur-sm text-white dark:text-white light:text-gray-900 rounded-lg hover:bg-dark-600 light:hover:bg-light-600 transition font-semibold border border-gray-700 dark:border-gray-700 light:border-gray-400">
+                    <span class="flex items-center gap-2">
+                        <svg class="w-5 h-5 group-hover:rotate-12 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
+                        </svg>
+                        Contact
+                    </span>
+                </a>
+            </div>
+            
+            <!-- Scroll Indicator -->
+            <div class="absolute bottom-10 left-1/2 transform -translate-x-1/2 animate-bounce-slow">
+                <svg class="w-6 h-6 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3"></path>
+                </svg>
             </div>
         </div>
     </section>
